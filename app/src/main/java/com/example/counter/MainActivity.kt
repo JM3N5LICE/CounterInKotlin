@@ -23,15 +23,16 @@ class MainActivity : AppCompatActivity() {
             count += countByInput.text.toString().toInt()
             countOutput.text = count.toString()
         }
-        reset_button.setOnClickListener { reset_count() }
+        reset_button.setOnClickListener {
+            count = 0
+            countOutput.text = count.toString()
+        }
 
 
         countByInput = findViewById<EditText>(R.id.CountBy_input)
         countOutput = findViewById<TextView>(R.id.count_output)
     }
 
-    private fun reset_count() {
 
-    }
 }
 
