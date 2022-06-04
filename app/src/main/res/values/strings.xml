@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Counter</string>
-<!--    <string-array name="values">-->
+    <string name="counter">Counter</string>
+    <!--    <string-array name="values">-->
 <!--        <item>1</item>-->
 <!--        <item>5</item>-->
 <!--        <item>10</item>-->
