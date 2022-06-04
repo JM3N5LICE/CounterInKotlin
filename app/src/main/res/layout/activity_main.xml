@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4E4D4D"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:text="Counter"
+        android:textColor="#FA61FA14"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,6 +30,8 @@
         android:hint="Enter Value"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textColor="#FA61FA14"
+        android:textColorHint="#FA61FA14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
         android:text="Enter a value and press button"
+        android:textColor="#FA61FA14"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

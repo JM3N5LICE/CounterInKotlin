@@ -2,9 +2,14 @@ package com.example.counter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+//import android.view.View
+//import android.widget.AdapterView
+//import android.widget.ArrayAdapter
+//import android.widget.Spinner
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,22 +20,27 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val count_button = findViewById<Button>(R.id.count)
-        val reset_button = findViewById<Button>(R.id.reset)
+        val countButton = findViewById<Button>(R.id.count)
+        val resetButton = findViewById<Button>(R.id.reset)
+
 
         var count = 0
-        count_button.setOnClickListener {
-            count += countByInput.text.toString().toInt()
-            countOutput.text = count.toString()
+        countButton.setOnClickListener {
+            try {
+                count += countByInput.text.toString().toInt()
+                countOutput.text = count.toString()
+            } catch (e : Exception) {
+                Toast.makeText(this, "Invalid Number! Please enter an Integer!", Toast.LENGTH_LONG).show()
+            }
         }
-        reset_button.setOnClickListener {
+        resetButton.setOnClickListener {
             count = 0
             countOutput.text = count.toString()
         }
 
 
-        countByInput = findViewById<EditText>(R.id.CountBy_input)
-        countOutput = findViewById<TextView>(R.id.count_output)
+        countByInput = findViewById(R.id.CountBy_input)
+        countOutput = findViewById(R.id.count_output)
     }
 
 
